@@ -2,12 +2,14 @@
 
 import Counter from "@/component/counter";
 import Total from "@/component/total";
+import Post from "@/component/post";
 import { useDispatch, useSelector } from "react-redux";
 import { increment, decrement } from "@/features/counters/counterSlice";
+import { RootState, AppDispatch } from "@/store/store";
 
 export default function Home() {
-    const Counters = useSelector((state) => state.counters);
-    const CounterDispatch = useDispatch();
+    const Counters = useSelector((state: RootState) => state.counters);
+    const CounterDispatch = useDispatch<AppDispatch>();
 
     const handleOnIncrement = (id: number) => {
         // Dispatch increment action
@@ -32,6 +34,7 @@ export default function Home() {
                 />
             ))}
             <Total />
+            <Post />
         </>
     );
 }
