@@ -5,9 +5,9 @@ Each Branch is responsible about the different different features of RTK and so 
 Main branch only for **setup** and **SLICE** practice of RTK. 
 
 **BRANCHES**
-    - -> Main: Redux Setup and RTK
-    - -> initialization . 
--> feature/F-1_Redux_Thunk : Async State Management
+
+    1. Main: Redux Setup and RTK initialization . 
+    2. feature/F-1_Redux_Thunk : Async State Management
 
 
 ## Getting Started
