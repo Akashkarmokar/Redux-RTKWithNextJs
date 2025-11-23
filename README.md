@@ -2,7 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## OVERVIEW
 This project embodies about the best practice of React Redux and Redux Tool kit with Next Js. 
-Each Branch is responsible about the different different features of RTK and so on excluding main branch . Main branch only for **setup** and **SLICE** practice of RTK. 
+Each Branch is responsible about the different different features of RTK and so on excluding main branch . 
+Main branch only for **setup** and **SLICE** practice of RTK. 
 
 
 
