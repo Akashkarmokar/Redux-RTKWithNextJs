@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchPosts } from "@/features/posts/postsSlice";
 import { RootState, AppDispatch } from "@/store/store";
 
-import type { Post } from "@/features/posts/postsSlice";
+import type { Post } from "@/features/posts/post.types";
 
 const Post = () => {
     const { posts, isLoading, isError, errorMessage } = useSelector(

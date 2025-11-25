@@ -1,23 +1,8 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { getPosts } from "./postsApi";
 
-// 1️⃣ Define a Post type (adjust according to your API)
-export interface Post {
-    userId: number;
-    id: number;
-    title: string;
-    body: string;
-}
+import type { Post, PostsState } from "./post.types";
 
-// 2️⃣ Define your slice state type
-export interface PostsState {
-    posts: Post[];
-    isLoading: boolean;
-    isError: boolean;
-    errorMessage: string | null;
-}
-
-// 3️⃣ Initial state typed with PostsState
 const initialState: PostsState = {
     posts: [],
     isLoading: false,
@@ -25,7 +10,6 @@ const initialState: PostsState = {
     errorMessage: null,
 };
 
-// 4️⃣ Async thunk with return type <Post[]>
 export const fetchPosts = createAsyncThunk<Post[]>(
     "posts/fetchPosts",
     async () => {
@@ -34,7 +18,6 @@ export const fetchPosts = createAsyncThunk<Post[]>(
     }
 );
 
-// 5️⃣ Slice with proper typing of state + actions
 const postsSlice = createSlice({
     name: "posts",
     initialState,
