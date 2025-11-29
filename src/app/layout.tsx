@@ -2,8 +2,6 @@
 
 import "./globals.css";
 import Navbar from "@/component/navbar";
-import { Provider } from "react-redux";
-import store from "../store/store";
 
 export default function RootLayout({
     children,
@@ -13,10 +11,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body suppressHydrationWarning>
-                <Provider store={store}>
-                    <Navbar />
-                    {children}
-                </Provider>
+                <Navbar />
+                {children}
             </body>
         </html>
     );
